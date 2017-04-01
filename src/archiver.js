@@ -7,7 +7,8 @@ const saveType = 'HTMLComplete'
 
 // const savePath = ()
 export const slugify = R.compose(
-  R.replace(/\!{2,}/g, '!'), // Replace multiple slash replacements
+  R.replace(/[!]$/, ''), // Remove any trailing slash replacements
+  R.replace(/\!{2,}/g, '!'), // Replace multiple slashes `g.com//e/df/`
   R.replace(/\//g, '!'), // Replace slashes
   R.replace(/[\w\-_\.]+(:[^@]+)?@/, ''), // Replace user:pass
   R.replace(/^[\w]+:\/\//, '') // Remove protocols

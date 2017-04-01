@@ -19,6 +19,14 @@ describe('slugify', () => {
     expect(slug).toBe('github.com!nanoxd!archiver')
   })
 
+  it('should not contain a trailing slash', () => {
+    const url = 'https://github.com/nanoxd/archiver/'
+    const urlWithDoubleSlash = 'https://github.com/nanoxd/archiver//'
+
+    expect(slugify(url)).toBe('github.com!nanoxd!archiver')
+    expect(slugify(urlWithDoubleSlash)).toBe('github.com!nanoxd!archiver')
+  })
+
   it('should return a valid slug when url contains multiple slashes', () => {
     const url = 'https://github.com/nanoxd//archiver'
 
