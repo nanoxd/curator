@@ -9,7 +9,7 @@
     "dev": "nodemon --inspect src/index.js --exec \"node -r babel-register\"",
     "prestart": "npm run -s build",
     "start": "node dist/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "author": "Fernando Paredes <nano@fdp.io>",
   "license": "MIT",
@@ -42,5 +42,8 @@
       "<rootDir>/src"
     ],
     "testEnvironment": "node"
+  },
+  "directories": {
+    "test": "test"
   }
 }
