@@ -13,6 +13,15 @@
   },
   "author": "Fernando Paredes <nano@fdp.io>",
   "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-jest": "^19.0.0",
+    "babel-preset-env": "^1.3.2",
+    "babel-register": "^6.24.0",
+    "jest": "^19.0.2",
+    "nodemon": "^1.11.0",
+    "rimraf": "^2.6.1"
+  },
   "babel": {
     "presets": [
       [
@@ -24,15 +33,6 @@
         }
       ]
     ]
-  },
-  "devDependencies": {
-    "babel-cli": "^6.24.0",
-    "babel-jest": "^19.0.0",
-    "babel-preset-env": "^1.3.2",
-    "babel-register": "^6.24.0",
-    "jest": "^19.0.2",
-    "nodemon": "^1.11.0",
-    "rimraf": "^2.6.1"
   },
   "jest": {
     "modulePaths": [
