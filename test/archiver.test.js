@@ -10,6 +10,15 @@ describe('slugify', () => {
     expect(slug).toBe('github.com!nanoxd!archiver')
   })
 
+  it('should return a valid slug with a different protocol', () => {
+    const validUrl = 'ftp://github.com/nanoxd/archiver'
+
+    const slug = slugify(validUrl)
+
+    expect(slug).not.toMatch(/ftp/)
+    expect(slug).toBe('github.com!nanoxd!archiver')
+  })
+
   it('should return a valid slug when url contains multiple slashes', () => {
     const url = 'https://github.com/nanoxd//archiver'
 
