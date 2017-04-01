@@ -15,4 +15,10 @@ describe('slugify', () => {
 
     expect(slugify(url)).toBe('github.com!nanoxd!archiver')
   })
+
+  it('should not contain user:pass from url', () => {
+    const url = 'https://nano:pass@github.com/nanoxd/archiver'
+
+    expect(slugify(url)).toBe('github.com!nanoxd!archiver')
+  })
 })

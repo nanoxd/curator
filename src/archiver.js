@@ -9,6 +9,7 @@ const saveType = 'HTMLComplete'
 export const slugify = R.compose(
   R.replace(/\!{2,}/g, '!'), // Replace multiple slash replacements
   R.replace(/\//g, '!'), // Replace slashes
+  R.replace(/[\w\-_\.]+(:[^@]+)?@/, ''), // Replace user:pass
   R.replace(/^[\w]+:\/\//, '') // Remove protocols
 )
 
